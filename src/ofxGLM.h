@@ -1,26 +1,19 @@
-//
-//  ofxGLM.h
-//  ofxGLMExample
-//
-//  Created by Greg Borenstein on 3/13/13.
-//
-//
-
-#ifndef ofxGLMExample_ofxGLM_h
-#define ofxGLMExample_ofxGLM_h
-
 #pragma once
-#include "glm.hpp"
-#include "ext.hpp"
+#include "../libs/glm/glm.hpp"
+#include "../libs/glm/ext.hpp"
 
 #include "ofMain.h"
 
-namespace ofxGLM {
-    //ofVec3f toOf(glm::vec3 v);
-    //glm::vec3 toGlm(ofVec3f v);
-    ofVec3f toOf(glm::vec3 v);
-    glm::vec3 toGlm(ofVec3f v);
-    
-}
+#define OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(X, Y) \
+	Y & toGLM(X &); \
+	const Y & toCv(const X &); \
+	X & toOf(Y &); \
+	const X & toOf(const Y &);
 
-#endif
+namespace ofxGLM {
+	OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(ofVec2f, glm::vec2);
+	OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(ofVec3f, glm::vec3);
+	OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(ofVec4f, glm::vec4);
+	OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(ofMatrix3x3, glm::mat3);
+	OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(ofMatrix4x4, glm::mat4);
+}
