@@ -14,6 +14,7 @@ namespace ofxGLM {
 	OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(ofVec2f, glm::vec2);
 	OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(ofVec3f, glm::vec3);
 	OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(ofVec4f, glm::vec4);
+	OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(ofQuaternion, glm::quat);
 	OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(ofMatrix3x3, glm::mat3);
 	OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(ofMatrix4x4, glm::mat4);
 }
