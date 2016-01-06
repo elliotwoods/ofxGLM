@@ -6,7 +6,7 @@
 
 #define OFXGLM_MATCHED_TYPE_OF_GLM_HEADER(X, Y) \
 	Y & toGLM(X &); \
-	const Y & toCv(const X &); \
+	const Y & toGLM(const X &); \
 	X & toOf(Y &); \
 	const X & toOf(const Y &);
 
